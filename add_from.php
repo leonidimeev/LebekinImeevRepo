@@ -7,7 +7,7 @@ $link = mysqli_connect($server,$user,$password,$database)
 $name = mysqli_real_escape_string($link, $_POST['name']);
 $image = mysqli_real_escape_string($link, $_POST['image']);
 $maker = mysqli_real_escape_string($link, $_POST['maker']);
-$time = mysqli_real_escape_string($link, $_POST['storage time']);
+$time = mysqli_real_escape_string($link, $_POST['time']);
 $medicine = mysqli_real_escape_string($link, $_POST['medicine']);
 // Ecape String
 
