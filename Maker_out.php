@@ -8,7 +8,7 @@
 	printf('<P>Makers: v1.0</P> %s',"\n");
 	include ('config.php');
 	
-	$link = mysqli_connect('10.14.129.132', 'LebedkinAnatolij', 'QFbg8V97', 'LebedkinAnatolijDB')
+	$link = mysqli_connect($server, $user, $password, $database)
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
