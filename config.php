@@ -1,6 +1,6 @@
 <?php
-$server='10.14.129.132';
-$user='LebedkinAnatolij';
-$password='QFbg8V97';
+$server='localhost';
+$user='user1234';
+$password='user1234';
 $database='LebedkinAnatolijDB';
 ?>
