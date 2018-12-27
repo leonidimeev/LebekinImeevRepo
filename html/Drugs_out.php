@@ -44,7 +44,7 @@ function preloadImages() {
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
-	$SQLquery = 'SELECT DrugsNew.ID, DrugsNew.Name, DrugsNew.Image, Makers.Name, Medicine.Name FROM DrugsNew AS a JOIN Makers AS b ON a.Maker=b.ID  JOIN Medicine AS d ON a.Medicine=d.ID';
+	$SQLquery = 'SELECT DrugsNew.ID, DrugsNew.Name, DrugsNew.Image, Makers.Name, Medicine.Name FROM DrugsNew JOIN Makers ON DrugsNew.Maker=Makers.ID  JOIN Medicine ON DrugsNew.Medicine=Medicine.ID';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
