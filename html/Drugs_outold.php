@@ -1,43 +1,10 @@
-<HTML>
-<HEAD>
-<TITLE>Imeev_Lebedkin</TITLE>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<SCRIPT TYPE="text/javascript">
-
-function newImage(arg) {
-	if (document.images) {
-		rslt = new Image();
-		rslt.src = arg;
-		return rslt;
-	}
-}
-
-function changeImages() {
-	if (document.images && (preloadFlag == true)) {
-		for (var i=0; i<changeImages.arguments.length; i+=2) {
-			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
-		}
-	}
-}
-
-var preloadFlag = false;
-function preloadImages() {
-	if (document.images) {
-		home_over = newImage("images/home-over.gif");
-		company_over = newImage("images/company-over.gif");
-		services_over = newImage("images/services-over.gif");
-		products_over = newImage("images/products-over.gif");
-		preloadFlag = true;
-	}
-}
-
-</SCRIPT>
-</HEAD>
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-<center>
-<BODY BGCOLOR=#FFFFFF LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 ONLOAD="preloadImages();">
-<TABLE>
-<?php
+<html>
+ <head>
+  <title>Online Drugstore Database</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+ <body>
+    <?php
 	printf('<P>Hello world! Searching for every medicine:</P> %s',"\n");
 	include('config.php');	
 	$link = mysqli_connect($server,$user,$password,$database)
@@ -68,7 +35,7 @@ function preloadImages() {
 	mysqli_close($link);
 
 ?>
-</TABLE>
-</BODY>
-</center>
-</HTML>
+<BR>
+<a href="index.html"> <P>GO BACK</P> </a>
+ </body>
+</html>
