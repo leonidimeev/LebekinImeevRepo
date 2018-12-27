@@ -44,7 +44,7 @@ function preloadImages() {
 	    or die('Error: Unable to connect: ' . mysqli_connect_error());
 	printf('<P>Succesfully connected!</P> %s',"\n");
 	
-	$SQLquery = 'SELECT a.ID, a.Name, a.Image, b.Name, c.Time, d.Name FROM DrugsNew AS a JOIN Maker AS b ON a.Maker=b.ID JOIN Storage_time AS c ON a.Storage_time=c.ID JOIN Medicine AS d ON a.Medicine=d.ID';
+	$SQLquery = 'SELECT a.ID, a.Name, a.Image, b.Name, d.Name FROM DrugsNew AS a JOIN Maker AS b ON a.Maker=b.ID  JOIN Medicine AS d ON a.Medicine=d.ID';
 	$SQLresult = mysqli_query($link,$SQLquery);
 
 	printf('<table cellspacing=\' 0 \' border=\' 1 \'> %s',"\n");
@@ -53,14 +53,14 @@ function preloadImages() {
 	printf('	<TH>Name</TH> %s',"\n");
 	printf('	<TH>Image</TH> %s',"\n");
 	printf('	<TH>Maker</TH> %s',"\n");
-	printf('	<TH>Storage time</TH> %s',"\n");
+	#printf('	<TH>Storage time</TH> %s',"\n");
 	printf('	<TH>Medicine</TH> %s',"\n");
 	printf('</TR> %s',"\n");
 
 	while ($result = mysqli_fetch_array($SQLresult,MYSQLI_NUM))
 	{
 		printf('<TR>');
-		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s  </TD><TD> %s  </TD><TD> %s  </TD><TD> %s  </TD>',$result[0],$result[1],$result[2],$result[3],$result[4],$result[5]);
+		printf('<TD> %s </TD> <TD>%s</TD> <TD> %s  </TD><TD> %s  </TD><TD> %s  </TD>',$result[0],$result[1],$result[2],$result[3],$result[4]);
 		printf('</TR> %s',"\n");
 	}
 	printf('</table> %s',"\n");
